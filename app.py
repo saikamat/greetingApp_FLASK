@@ -5,7 +5,7 @@ import requests
 from datetime import datetime
 
 app = Flask(__name__)
-# app.secret_key = "manbearpig_MUDMAN888"
+app.secret_key = "manbearpig_MUDMAN888"
 API_KEY='2d7b9cdbd447b9209792375990f6f7d6fce1b2cbc39f5aaa7406bf7669520d1e'
 API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDJAZ21haWwuY29tOjJkN2I5Y2RiZDQ0N2I5MjA5NzkyMzc1OTkwZjZmN2Q2ZmNlMWIyY2JjMzlmNWFhYTc0MDZiZjc2Njk1MjBkMWU='
 
