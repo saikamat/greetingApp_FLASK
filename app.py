@@ -11,7 +11,7 @@ def index():
 
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
-	data = request.get_json()
+	data = request.form['ticket_id']
 	if data:
 		flash("Data here!")
 	else:
