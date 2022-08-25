@@ -19,7 +19,7 @@ def greeter():
 	json_data = json.loads(request.data)
 	if json_data['message']['ticket_id']:
 		ticket_id = json_data['message']['ticket_id']
-		user = json_data['ticket']['sender']['email']
+		user = json_data['message']['sender']['email']
 		email_text = 'Hi, our agent will be with you shortly .'
 		message_text = 'Priority #1'
 		sender_id = json_data['message']['sender']['id']
