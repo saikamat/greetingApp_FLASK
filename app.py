@@ -5,8 +5,8 @@ import requests
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
-API_KEY='cb40d7ff4d62b0b0115fdfccd947494b475599a395adb28d89032b1346888f34'
-API_KEY_BASE64='a2Fpc2hhbWF0ODlAZ21haWwuY29tOmNiNDBkN2ZmNGQ2MmIwYjAxMTVmZGZjY2Q5NDc0OTRiNDc1NTk5YTM5NWFkYjI4ZDg5MDMyYjEzNDY4ODhmMzQ='
+API_KEY='9f6686031db64b948313dd194bb4319b76cd5641c6cb6080d16ae494ce063678'
+API_KEY_BASE64='c2Fpa2FtYXQyOjlmNjY4NjAzMWRiNjRiOTQ4MzEzZGQxOTRiYjQzMTliNzZjZDU2NDFjNmNiNjA4MGQxNmFlNDk0Y2UwNjM2Nzg='
 
 @app.route("/hello")
 def index():
@@ -30,7 +30,7 @@ def greeter():
 
 def send_email_response(ticket_id):
 	# print(ticket_id)
-	response_url = "https://saikamat89.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat2.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
@@ -80,7 +80,7 @@ def send_email_response(ticket_id):
 
 
 def send_internal_mail(ticket_id):
-	response_url = "https://saikamat89.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat2.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print('in internal emailL:****' + response_url)
 	# payload = json.dumps({
 	# 	"channel": "email",
