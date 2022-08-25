@@ -35,7 +35,7 @@ def greeter():
 
 		#print('send internal email')
 		# send_internal_mail(ticket_id, user, message_text, sender_id)
-		return 'success', 200
+		# return 'success', 200
 		return render_template("index.html")
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
