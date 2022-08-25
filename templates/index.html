@@ -9,9 +9,20 @@
     <img src="../static/img/logo.png">
     <br>
     <form action="greet" method="post">
-        {% for message in get_flashed_messages() %}
+        <!-- {% for message in get_flashed_messages() %}
              <p>{{ message }}</p>
-         {% endfor %}
+         {% endfor %} -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <!-- <div class="alert alert-{{ category }}"> -->
+                    {{ message }}
+                <!-- </div> -->
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
         <br>
         <input type="text" placeholder="Enter your response here" name="message_input">
         <br>

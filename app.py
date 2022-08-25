@@ -37,7 +37,7 @@ def greeter():
 
 		#print('send internal email')
 		# send_internal_mail(ticket_id, user, message_text, sender_id)
-	
+		flash(ticket_id,'success')
 		return 'success', 200
 		# return render_template("index.html")
 
