@@ -5,7 +5,7 @@ import requests
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
-API_KEY='d55342c9dac491ada6566cbd337c596a7d033f4a35fd7cb93888f2868afb54b6'
+API_KEY='3dbcf0f84c9aab441c96a87394560384698f2fbf319eace0155e22effef0737f'
 
 @app.route("/hello")
 def index():
@@ -28,29 +28,38 @@ def send_email_response(ticket_id):
 	response_url = "https://saikamat.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = {
-		"receiver": {"id": 11899069},
-		"sender": {"id": 11899005},
+		"channel": "email",
+		"from_agent": true,
 		"source": {
+			"type": "email",
+			"from": {
+				"id": 11899005,
+				"name": "Sai from Gorgias Support",
+				"address": "pqe41g4kn4d58yl3@emails.gorgias.com"
+			},
 			"to": [
 				{
+					"id": 11899069,
 					"name": "Shruti",
 					"address": "kuberaspeaking@gmail.com"
 				}
-			],
-			"from": {
-				"name": "Sai from Gorgias Support",
-				"address": "norwayumfall@gmail.com"
-			},
-			"type": "email"
+			]
 		},
-		"channel": "email",
 		"via": "helpdesk",
-		"body_html": "Ko Koo Koo Koo Koo",
-		"body_text": "Ko Koo Koo Koo Koo",
+		"body_html": "Hello,<br><br>\n\n        I can't place an order on your site, it says: I don't have enough credit.<br>\n        How can I add some credits?<br><br>\n\n        Cheers,<br>\n        John Doe\n        ",
+		"body_text": "Hello,\n\n        I can't place an order on your site, it says: I don't have enough credit.\n        How can I add some credits?\n\n        Cheers,\n        John Doe\n        ",
 		"created_datetime": "2022-08-25T16:42:21.468912",
-		"from_agent": True,
+		"external_id": null,
+		"failed_datetime": null,
+		"message_id": null,
+		"receiver": {
+			"id": 11899069
+		},
+		"sender": {
+			"id": 11899005
+		},
 		"sent_datetime": "2022-08-25T16:42:21.468912",
-		"subject": "Birdemic"
+		"subject": "Re:Refund request"
 	}
 	headers = {
 		"Accept": "application/json",
