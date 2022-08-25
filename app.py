@@ -18,7 +18,7 @@ def greeter():
 	if json_data['message']['ticket_id']:
 		ticket_id = json_data['message']['ticket_id']
 		print(ticket_id)
-		send_email_response(json_data)
+		send_email_response(ticket_id)
 		return 'success', 200
 		# return render_template("index.html")
 
