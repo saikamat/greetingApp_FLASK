@@ -63,7 +63,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 		"via": "helpdesk",
 		"body_html": email_text,
 		"body_text": email_text,
-		"created_datetime": datetime.now(),
+		"created_datetime": "2022-08-25T21:46:41.966927",
 		"external_id": "",
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
@@ -73,7 +73,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 		"sender": {
 			"id": sender_id
 		},
-		"sent_datetime": datetime.now(),
+		"sent_datetime": "2022-08-25T21:46:41.966927",
 		"subject": "Thank you for reaching out"
 	})
 	headers = {
@@ -113,7 +113,7 @@ def send_internal_mail(ticket_id, user, message_text, sender_id):
 		"via": "helpdesk",
 		"body_html": message_text,
 		"body_text": message_text,
-		"created_datetime": datetime.now(),
+		"created_datetime": "2022-08-25T21:46:41.966927",
 		"external_id": "",
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
@@ -123,7 +123,7 @@ def send_internal_mail(ticket_id, user, message_text, sender_id):
 		"sender": {
 			"id": sender_id
 		},
-		"sent_datetime": datetime.now(),
+		"sent_datetime": "2022-08-25T21:46:41.966927",
 		"subject": "Thank you for reaching out"
 	})
 	headers = {
