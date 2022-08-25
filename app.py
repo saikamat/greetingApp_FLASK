@@ -19,7 +19,11 @@ def greeter():
 	if json_data['message']['ticket_id']:
 		ticket_id = json_data['message']['ticket_id']
 		print(ticket_id)
+		print('send email response')
 		send_email_response(ticket_id)
+
+		print('send internal email')
+		send_internal_mail(ticket_id)
 		return 'success', 200
 		# return render_template("index.html")
 
@@ -73,4 +77,55 @@ def send_email_response(ticket_id):
 
 
 	print(response.text)
+
+
+def send_internal_mail(ticket_id):
+	response_url = "https://saikamat89.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	print(response_url)
+	payload = json.dumps({
+		"channel": "email",
+		"from_agent": True,
+		"source": {
+			"type": "internal-note",
+			"from": {
+			"id": 11921348,
+			"name": "Sai from Gorgias Support",
+			"address": "n2kmlgdyme1gde16@emails.gorgias.com"
+			},
+			"to": [
+			{
+				"id": 11921348,
+				"name": "Shruti",
+				"address": "kaishamat89@gmail.com"
+			}
+			]
+		},
+		"via": "helpdesk",
+		"body_html": "This client needs to be take care of quickly.",
+		"body_text": "This client needs to be take care of quickly.",
+		"created_datetime": "2022-08-25T18:18:21.468912",
+		"external_id": "",
+		"failed_datetime": None,
+		"message_id": "<123345676453.2445.234@web>",
+		"receiver": {
+			"id": 11921348
+		},
+		"sender": {
+			"id": 11921348
+		},
+		"sent_datetime": "2022-08-25T18:18:21.468912",
+		"subject": "Re:Refund request"
+	})
+	headers = {
+		"Accept": "application/json",
+		"Content-Type": "application/json",
+		"Authorization": "Basic "+API_KEY_BASE64
+	}
+
+	# response = requests.post(response_url, json=payload, headers=headers)
+	response = requests.request("POST", response_url, headers=headers, data=payload)
+
+
+	print(response.text)
+
 
