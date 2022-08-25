@@ -10,5 +10,8 @@ def index():
 
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
-	flash("Hi " + request.json['ticket_id'] + ", great to see you!")
+	data = request.json
+	if data:
+		print("Received Data = ", data)
+	# flash("Hi " + request.json['ticket_id'] + ", great to see you!")
 	return render_template("index.html")
