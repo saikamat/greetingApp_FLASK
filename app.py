@@ -29,7 +29,7 @@ def send_email_response(ticket_id):
 	print(response_url)
 	payload = {
 		"channel": "email",
-		"from_agent": true,
+		"from_agent": True,
 		"source": {
 			"type": "email",
 			"from": {
@@ -49,9 +49,9 @@ def send_email_response(ticket_id):
 		"body_html": "Hello,<br><br>\n\n        I can't place an order on your site, it says: I don't have enough credit.<br>\n        How can I add some credits?<br><br>\n\n        Cheers,<br>\n        John Doe\n        ",
 		"body_text": "Hello,\n\n        I can't place an order on your site, it says: I don't have enough credit.\n        How can I add some credits?\n\n        Cheers,\n        John Doe\n        ",
 		"created_datetime": "2022-08-25T16:42:21.468912",
-		"external_id": null,
-		"failed_datetime": null,
-		"message_id": null,
+		"external_id": "",
+		"failed_datetime": "",
+		"message_id": "",
 		"receiver": {
 			"id": 11899069
 		},
