@@ -12,7 +12,7 @@ def index():
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
 	# data = request.form['ticket_id']
-	flash("Hi "  ", great to see you!")
+	flash("Hi " +str(request.form['ticket_id'])+ ", great to see you!")
 	# if data:
 	# 	flash("Data here!")
 	# else:
