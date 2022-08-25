@@ -12,6 +12,6 @@ def index():
 def greeter():
 	data = request.json
 	if data:
-		logging.info("Received Data = ", data)
+		logging.info("Received Data = ")
 	flash("Hi  , great to see you!")
 	return render_template("index.html")
