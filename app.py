@@ -5,8 +5,9 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
-API_KEY='67604f5fb412fdae94c6ed69c2b76ebd41739e038a952dfef1a4c1d598106371'
-API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDNAZ21haWwuY29tOjY3NjA0ZjVmYjQxMmZkYWU5NGM2ZWQ2OWMyYjc2ZWJkNDE3MzllMDM4YTk1MmRmZWYxYTRjMWQ1OTgxMDYzNzE='
+API_KEY='73220d04d338658f2cdae0caf39b0fa106a2d5995d1943e5c1752cc227134802'
+API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDRAZ21haWwuY29tOjczMjIwZDA0ZDMzODY1OGYyY2RhZTBjYWYzOWIwZmExMDZhMmQ1OTk1ZDE5NDNlNWMxNzUyY2MyMjcxMzQ4MDI='
+APP_URL = "https://saikamat5.gorgias.com/api/"
 
 @app.route("/hello")
 def index():
@@ -40,7 +41,7 @@ def greeter():
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
 	# print(ticket_id)
-	response_url = "https://saikamat4.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = APP_URL+"tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
@@ -90,7 +91,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 
 
 def send_internal_mail(ticket_id, user, message_text, sender_id):
-	response_url = "https://saikamat4.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = APP_URL+"tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
