@@ -29,16 +29,14 @@ def greeter():
 		print(ticket_id)
 		print('send email response')
 		# ideally I'd have preferred passing as a JSON object.
-		# send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name, receiver_name)
 		send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
 
 		#print('send internal email')
-		# send_internal_mail(ticket_id)
+		send_internal_mail(ticket_id, user, email_text, sender_id)
 		return 'success', 200
 		# return render_template("index.html")
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
-# def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name, receiver_name):
 	# print(ticket_id)
 	response_url = "https://sephora.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
@@ -89,42 +87,42 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 	print(response.text)
 
 
-def send_internal_mail(ticket_id):
-	response_url = "https://saikamat3.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
-	print('in internal emailL:****' + response_url)
+def send_internal_mail(ticket_id, user, email_text, sender_id):
+	response_url = "https://sephora.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
 		"from_agent": True,
 		"source": {
 			"type": "internal-note",
 			"from": {
-			"id": 11942663,
-			"name": "Sai from Gorgias Support",
-			"address": "nxy04g6pe705zqm2@emails.gorgias.com"
+			"id": sender_id,
+			# "name": sender_name,
+			"address": user
 			},
 			"to": [
 			{
-				"id": 11942663,
-				"name": "Sai from Gorgias Support",
-				"address": "nxy04g6pe705zqm2@emails.gorgias.com"
+				"id": sender_id,
+				#"name": receiver_name,
+				"address": user
 			}
 			]
 		},
 		"via": "helpdesk",
-		"body_html": "This client needs to be take care of quickly.",
-		"body_text": "This client needs to be take care of quickly.",
-		"created_datetime": "2022-08-25T18:18:21.468912",
+		"body_html": email_text,
+		"body_text": email_text,
+		"created_datetime": "2022-08-25T19:28:21.468912",
 		"external_id": "",
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
 		"receiver": {
-			"id": 11942663
+			"id": sender_id
 		},
 		"sender": {
-			"id": 11942663
+			"id": sender_id
 		},
-		"sent_datetime": "2022-08-25T18:18:21.468912",
-		"subject": "Re:Refund request"
+		"sent_datetime": "2022-08-25T19:28:21.468912",
+		"subject": "Thank you for reaching out"
 	})
 	headers = {
 		"Accept": "application/json",
