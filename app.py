@@ -32,7 +32,9 @@ def greeter():
 		print('send email response')
 		# ideally I'd have preferred passing as a JSON object.
 		send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
-		flash("Hi, New message from " + str(sender_name))
+		show_tickets(user)
+
+		# flash("Hi, new message from " + str(sender_name))
 		#print('send internal email')
 		# send_internal_mail(ticket_id, user, message_text, sender_id)
 		# render_template("index.html")
@@ -139,4 +141,7 @@ def send_internal_mail(ticket_id, user, message_text, sender_id):
 
 	print(response.text)
 
-
+@app.route("/tickets")
+def show_tickets(user):
+	flash("Hi there "+str(user)+"!")
+	return render_template("index.html")
