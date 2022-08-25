@@ -14,6 +14,8 @@ def index():
 	flash("Hi there!")
 	return render_template("index.html")
 
+
+
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
 	json_data = json.loads(request.data)
@@ -30,16 +32,14 @@ def greeter():
 		# password = API_KEY_BASE64
 		print(ticket_id)
 		print('send email response')
-		# show_tickets(ticket_id)
 		# ideally I'd have preferred passing as a JSON object.
 		send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
-		
 
 		#print('send internal email')
 		# send_internal_mail(ticket_id, user, message_text, sender_id)
-		flash(ticket_id,'success')
 		return 'success', 200
 		# return render_template("index.html")
+
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
 	# print(ticket_id)
