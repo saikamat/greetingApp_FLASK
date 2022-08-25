@@ -13,6 +13,7 @@ def index():
 def greeter():
 	# data = request.form['ticket_id']
 	print("\nrequest.data={}".format(request.data))
+	print(json.dumps(request.data['comment']))
 	return request.data
 	# flash("Hi " +json.dumps(request.json)+ ", great to see you!")
 	# if data:
