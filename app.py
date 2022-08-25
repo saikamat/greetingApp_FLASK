@@ -1,6 +1,6 @@
 from urllib.request import urlopen
 from flask import Flask, render_template, request, flash
-# import logging
+import json
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
 
@@ -12,7 +12,7 @@ def index():
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
 	# data = request.form['ticket_id']
-	flash("Hi " +str(request.form['ticket_id'])+ ", great to see you!")
+	flash("Hi " +json.dumps(request.json)+ ", great to see you!")
 	# if data:
 	# 	flash("Data here!")
 	# else:
