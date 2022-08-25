@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash
-import logging
+# import logging
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
 
@@ -12,6 +12,6 @@ def index():
 def greeter():
 	data = request.json
 	if data:
-		logging.info("Received Data = ")
+		flash("Data here!")
 	flash("Hi  , great to see you!")
 	return render_template("index.html")
