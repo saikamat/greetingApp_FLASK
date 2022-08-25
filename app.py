@@ -13,5 +13,7 @@ def greeter():
 	data = request.json
 	if data:
 		flash("Data here!")
-	flash("Hi  , great to see you!")
+	else:
+		flash("No data sorry")
+		# flash("Hi  , great to see you!")
 	return render_template("index.html")
