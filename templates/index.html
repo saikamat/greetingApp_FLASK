@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-    <img src="../static/img/douglas_logo.png">
+    <img src="../static/img/logo.png">
     <br>
     <form action="greet" method="post">
         {% for message in get_flashed_messages() %}
@@ -16,6 +16,6 @@
         <input type="text" placeholder="Enter your response here" name="message_input">
         <br>
         <input type="submit" value="Reply" id="greet">
-    </form>
+    </form>     
 </body>
 </html>
