@@ -1,5 +1,4 @@
-from urllib.request import urlopen
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, flash
 import json
 import requests
 from datetime import datetime
@@ -35,8 +34,9 @@ def greeter():
 
 		#print('send internal email')
 		# send_internal_mail(ticket_id, user, message_text, sender_id)
-		# return 'success', 200
-		return render_template("index.html")
+		render_template("index.html")
+		return 'success', 200
+		# return render_template("index.html")
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
 	# print(ticket_id)
