@@ -32,7 +32,7 @@ def greeter():
 		print('send email response')
 		show_tickets(user)
 		# ideally I'd have preferred passing as a JSON object.
-		send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
+		# send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
 		
 
 		#print('send internal email')
