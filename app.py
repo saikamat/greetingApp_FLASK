@@ -30,9 +30,10 @@ def greeter():
 		# password = API_KEY_BASE64
 		print(ticket_id)
 		print('send email response')
+		show_tickets(user)
 		# ideally I'd have preferred passing as a JSON object.
 		send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
-		show_tickets(user)
+		
 
 		#print('send internal email')
 		# send_internal_mail(ticket_id, user, message_text, sender_id)
@@ -65,7 +66,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 		"via": "helpdesk",
 		"body_html": email_text,
 		"body_text": email_text,
-		"created_datetime": "2022-08-25T21:46:41.966927",
+		"created_datetime": "2022-08-25T23:46:41.966927",
 		"external_id": "",
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
@@ -75,7 +76,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 		"sender": {
 			"id": sender_id
 		},
-		"sent_datetime": "2022-08-25T21:46:41.966927",
+		"sent_datetime": "2022-08-25T23:46:41.966927",
 		"subject": "Thank you for reaching out"
 	})
 	headers = {
