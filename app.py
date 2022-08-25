@@ -11,7 +11,7 @@ API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDNAZ21haWwuY29tOjY3NjA0ZjVmYjQxMmZkYWU5NGM2ZWQ2
 
 @app.route("/hello")
 def index():
-	flash("what's your name?")
+	flash("Hi there!")
 	return render_template("index.html")
 
 @app.route("/greet", methods=['POST', 'GET'])
