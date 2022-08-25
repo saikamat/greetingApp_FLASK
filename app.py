@@ -5,9 +5,9 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
-API_KEY='73220d04d338658f2cdae0caf39b0fa106a2d5995d1943e5c1752cc227134802'
-API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDRAZ21haWwuY29tOjczMjIwZDA0ZDMzODY1OGYyY2RhZTBjYWYzOWIwZmExMDZhMmQ1OTk1ZDE5NDNlNWMxNzUyY2MyMjcxMzQ4MDI='
-APP_URL = "https://saikamat5.gorgias.com/api"
+API_KEY='d2f416e41ba447190c0a3d3e429b8bf053e6b5abde4798269b774de7208081f9'
+API_KEY_BASE64='a3ViZXJhc3BlYWtpbmcrMDZAZ21haWwuY29tOmQyZjQxNmU0MWJhNDQ3MTkwYzBhM2QzZTQyOWI4YmYwNTNlNmI1YWJkZTQ3OTgyNjliNzc0ZGU3MjA4MDgxZjk='
+APP_URL = "https://saikamat6.gorgias.com/api/tickets/"
 
 @app.route("/hello")
 def index():
@@ -43,7 +43,7 @@ def greeter():
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
 	# print(ticket_id)
-	response_url = "https://saikamat5.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat6.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
