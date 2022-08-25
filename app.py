@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
 API_KEY='b8d9dc5526a4bf3a2a0bd04a53e71565289f2bd562cc716e55d66a9ab5a6c38b'
-API_KEY_BASE64='dmVub204OTE0QG1haWwuY29tOjlmNjY4NjAzMWRiNjRiOTQ4MzEzZGQxOTRiYjQzMTliNzZjZDU2NDFjNmNiNjA4MGQxNmFlNDk0Y2UwNjM2Nzg='
+API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDFAZ21haWwuY29tOmI4ZDlkYzU1MjZhNGJmM2EyYTBiZDA0YTUzZTcxNTY1Mjg5ZjJiZDU2MmNjNzE2ZTU1ZDY2YTlhYjVhNmMzOGI='
 
 @app.route("/hello")
 def index():
