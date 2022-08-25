@@ -38,15 +38,15 @@ def send_email_response(ticket_id):
 		"source": {
 			"type": "email",
 			"from": {
-			"id": 11921348,
-			"name": "Sai from Gorgias Support",
-			"address": "n2kmlgdyme1gde16@emails.gorgias.com"
+			"id": 11942663,
+			"name": "Saikamat2 Support",
+			"address": "nxy04g6pe705zqm2@emails.gorgias.com"
 			},
 			"to": [
 			{
-				"id": 11922192,
-				"name": "Shruti",
-				"address": "kuberaspeaking@gmail.com"
+				"id": 11944965,
+				"name": "Sai",
+				"address": "sai.s.kamat@gmail.com"
 			}
 			]
 		},
@@ -58,10 +58,10 @@ def send_email_response(ticket_id):
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
 		"receiver": {
-			"id": 11922192
+			"id": 11944965
 		},
 		"sender": {
-			"id": 11921348
+			"id": 11942663
 		},
 		"sent_datetime": "2022-08-25T16:42:21.468912",
 		"subject": "Re:Refund request"
@@ -88,13 +88,13 @@ def send_internal_mail(ticket_id):
 	# 	"source": {
 	# 		"type": "internal-note",
 	# 		"from": {
-	# 		"id": 11921348,
+	# 		"id": 11942663,
 	# 		"name": "Sai from Gorgias Support",
-	# 		"address": "n2kmlgdyme1gde16@emails.gorgias.com"
+	# 		"address": "nxy04g6pe705zqm2@emails.gorgias.com"
 	# 		},
 	# 		"to": [
 	# 		{
-	# 			"id": 11921348,
+	# 			"id": 11942663,
 	# 			"name": "Shruti",
 	# 			"address": "kaishamat89@gmail.com"
 	# 		}
@@ -108,10 +108,10 @@ def send_internal_mail(ticket_id):
 	# 	"failed_datetime": None,
 	# 	"message_id": "<123345676453.2445.234@web>",
 	# 	"receiver": {
-	# 		"id": 11921348
+	# 		"id": 11942663
 	# 	},
 	# 	"sender": {
-	# 		"id": 11921348
+	# 		"id": 11942663
 	# 	},
 	# 	"sent_datetime": "2022-08-25T18:18:21.468912",
 	# 	"subject": "Re:Refund request"
