@@ -11,7 +11,7 @@ def index():
 
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
-	data = urlopen('https://webhook-test-sai.herokuapp.com/greet').read()
+	data = request.get_json()
 	if data:
 		flash("Data here!")
 	else:
