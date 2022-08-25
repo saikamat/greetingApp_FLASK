@@ -25,7 +25,7 @@ def greeter():
 
 def send_email_response(ticket_id):
 	# print(ticket_id)
-	response_url = "https://saikamat.gorgias.com/api/tickets/"+ticket_id+"/messages"
+	response_url = "https://saikamat.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	# payload = {
 	# "receiver": {"id": 11899069},
