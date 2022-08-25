@@ -1,3 +1,4 @@
+from urllib.request import urlopen
 from flask import Flask, render_template, request, flash
 # import logging
 app = Flask(__name__)
@@ -10,10 +11,10 @@ def index():
 
 @app.route("/greet", methods=['POST', 'GET'])
 def greeter():
-	data = request.json
+	data = urlopen('https://webhook-test-sai.herokuapp.com/greet').read()
 	if data:
 		flash("Data here!")
 	else:
-		flash("No data sorry")
+		flash("No data sorry!!!")
 		# flash("Hi  , great to see you!")
 	return render_template("index.html")
