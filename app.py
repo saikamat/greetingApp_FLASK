@@ -15,11 +15,6 @@ def greeter():
 	# print("\nrequest.data={}".format(request.data))
 	json_data = json.loads(request.data)
 	print(json_data['message']['ticket_id'])
-	return 'success', 200
-	# flash("Hi " +json.dumps(request.json)+ ", great to see you!")
-	# if data:
-	# 	flash("Data here!")
-	# else:
-	# 	flash("No data sorry!!!")
-		# flash("Hi  , great to see you!")
-	# return render_template("index.html")
+	flash("Hi " +json_data['message']['ticket_id']+ ", great to see you!" )
+	# return 'success', 200
+	return render_template("index.html")
