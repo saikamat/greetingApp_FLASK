@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
 API_KEY='73220d04d338658f2cdae0caf39b0fa106a2d5995d1943e5c1752cc227134802'
 API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDRAZ21haWwuY29tOjczMjIwZDA0ZDMzODY1OGYyY2RhZTBjYWYzOWIwZmExMDZhMmQ1OTk1ZDE5NDNlNWMxNzUyY2MyMjcxMzQ4MDI='
-APP_URL = "https://saikamat5.gorgias.com/api/"
+APP_URL = "https://saikamat5.gorgias.com/api"
 
 @app.route("/hello")
 def index():
@@ -34,16 +34,15 @@ def greeter():
 		send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
 		show_tickets(user)
 
-		# flash("Hi, new message from " + str(sender_name))
 		#print('send internal email')
 		# send_internal_mail(ticket_id, user, message_text, sender_id)
-		# render_template("index.html")
+	
 		return 'success', 200
 		# return render_template("index.html")
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
 	# print(ticket_id)
-	response_url = APP_URL+"tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat5.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
