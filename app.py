@@ -24,40 +24,41 @@ def greeter():
 
 
 def send_email_response(ticket_id):
-	response_url = "https://saikamat.gorgias.com/api/tickets/"+ticket_id+"/messages"
+	print(ticket_id)
+	# response_url = "https://saikamat.gorgias.com/api/tickets/"+ticket_id+"/messages"
 
-	payload = {
-	"receiver": {"id": 11899069},
-	"sender": {"id": 11899005},
-	"source": {
-		"to": [
-			{
-				"name": "Shruti",
-				"address": "kuberaspeaking@gmail.com"
-			}
-		],
-		"from": {
-			"name": "Sai from Gorgias Support",
-			"address": "norwayumfall@gmail.com"
-		},
-		"type": "email"
-	},
-	"channel": "email",
-	"via": "helpdesk",
-	"body_html": "Ko Koo Koo Koo Koo",
-	"body_text": "Ko Koo Koo Koo Koo",
-	"created_datetime": "2022-08-25T16:42:21.468912",
-	"from_agent": True,
-	"sent_datetime": "2022-08-25T16:42:21.468912",
-	"subject": "Birdemic"
-	}
-	headers = {
-		"Accept": "application/json",
-		"Content-Type": "application/json",
-		"Authorization": "Basic "+API_KEY
-	}
+	# payload = {
+	# "receiver": {"id": 11899069},
+	# "sender": {"id": 11899005},
+	# "source": {
+	# 	"to": [
+	# 		{
+	# 			"name": "Shruti",
+	# 			"address": "kuberaspeaking@gmail.com"
+	# 		}
+	# 	],
+	# 	"from": {
+	# 		"name": "Sai from Gorgias Support",
+	# 		"address": "norwayumfall@gmail.com"
+	# 	},
+	# 	"type": "email"
+	# },
+	# "channel": "email",
+	# "via": "helpdesk",
+	# "body_html": "Ko Koo Koo Koo Koo",
+	# "body_text": "Ko Koo Koo Koo Koo",
+	# "created_datetime": "2022-08-25T16:42:21.468912",
+	# "from_agent": True,
+	# "sent_datetime": "2022-08-25T16:42:21.468912",
+	# "subject": "Birdemic"
+	# }
+	# headers = {
+	# 	"Accept": "application/json",
+	# 	"Content-Type": "application/json",
+	# 	"Authorization": "Basic "+API_KEY
+	# }
 
-	response = requests.post(response_url, json=payload, headers=headers)
+	# response = requests.post(response_url, json=payload, headers=headers)
 
-	print(response.text)
+	# print(response.text)
 
