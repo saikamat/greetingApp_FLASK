@@ -18,5 +18,6 @@ def greeter():
 		ticket_id = json_data['message']['ticket_id']
 		print(ticket_id)
 		flash("Hi "+str(ticket_id)+ ", great to see you!" )
-		# return 'success', 200
-		return render_template("index.html")
+		render_template("index.html")
+		return 'success', 200
+		# return render_template("index.html")
