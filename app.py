@@ -23,7 +23,7 @@ def greeter():
 		send_email_response(ticket_id)
 
 		print('send internal email')
-		send_internal_mail(ticket_id)
+		# send_internal_mail(ticket_id)
 		return 'success', 200
 		# return render_template("index.html")
 
