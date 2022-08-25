@@ -67,7 +67,9 @@ def send_email_response(ticket_id):
 		"Authorization": "Basic "+API_KEY
 	}
 
-	response = requests.post(response_url, json=payload, headers=headers)
+	# response = requests.post(response_url, json=payload, headers=headers)
+	response = requests.request("POST", response_url, headers=headers, data=payload)
+
 
 	print(response.text)
 
