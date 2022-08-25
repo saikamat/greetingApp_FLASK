@@ -30,9 +30,9 @@ def greeter():
 		# password = API_KEY_BASE64
 		print(ticket_id)
 		print('send email response')
-		show_tickets(ticket_id)
+		# show_tickets(ticket_id)
 		# ideally I'd have preferred passing as a JSON object.
-		# send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
+		send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name)
 		
 
 		#print('send internal email')
@@ -141,7 +141,7 @@ def send_internal_mail(ticket_id, user, message_text, sender_id):
 
 	print(response.text)
 
-@app.route("/tickets")
-def show_tickets(ticket_id):
-	flash("New Ticket "+str(ticket_id)+"!")
-	return render_template("index.html")
+# @app.route("/tickets")
+# def show_tickets(ticket_id):
+# 	flash("New Ticket "+str(ticket_id)+"!")
+# 	return render_template("index.html")
