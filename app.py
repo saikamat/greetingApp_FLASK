@@ -5,8 +5,8 @@ import requests
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
-API_KEY='3dbcf0f84c9aab441c96a87394560384698f2fbf319eace0155e22effef0737f'
-API_KEY_BASE64='bm9yd2F5dW1mYWxsQGdtYWlsLmNvbTozZGJjZjBmODRjOWFhYjQ0MWM5NmE4NzM5NDU2MDM4NDY5OGYyZmJmMzE5ZWFjZTAxNTVlMjJlZmZlZjA3Mzdm'
+API_KEY='cb40d7ff4d62b0b0115fdfccd947494b475599a395adb28d89032b1346888f34'
+API_KEY_BASE64='a2Fpc2hhbWF0ODlAZ21haWwuY29tOmNiNDBkN2ZmNGQ2MmIwYjAxMTVmZGZjY2Q5NDc0OTRiNDc1NTk5YTM5NWFkYjI4ZDg5MDMyYjEzNDY4ODhmMzQ='
 
 @app.route("/hello")
 def index():
@@ -26,7 +26,7 @@ def greeter():
 
 def send_email_response(ticket_id):
 	# print(ticket_id)
-	response_url = "https://saikamat.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat89.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
@@ -34,13 +34,13 @@ def send_email_response(ticket_id):
 		"source": {
 			"type": "email",
 			"from": {
-			"id": 11899005,
+			"id": 11921348,
 			"name": "Sai from Gorgias Support",
-			"address": "pqe41g4kn4d58yl3@emails.gorgias.com"
+			"address": "n2kmlgdyme1gde16@emails.gorgias.com"
 			},
 			"to": [
 			{
-				"id": 11899069,
+				"id": 11922192,
 				"name": "Shruti",
 				"address": "kuberaspeaking@gmail.com"
 			}
@@ -54,10 +54,10 @@ def send_email_response(ticket_id):
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
 		"receiver": {
-			"id": 11899069
+			"id": 11922192
 		},
 		"sender": {
-			"id": 11899005
+			"id": 11921348
 		},
 		"sent_datetime": "2022-08-25T16:42:21.468912",
 		"subject": "Re:Refund request"
