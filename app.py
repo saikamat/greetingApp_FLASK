@@ -126,6 +126,6 @@ def send_internal_mail(ticket_id):
 	# response = requests.request("POST", response_url, headers=headers, data=payload)
 
 
-	print(response.text)
+	# print(response.text)
 
 
