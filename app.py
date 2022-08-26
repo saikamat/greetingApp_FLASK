@@ -81,10 +81,10 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 		"Content-Type": "application/json",
 		"Authorization": "Basic "+API_KEY_BASE64
 	}
-
+	print('before sending')
 	# response = requests.post(response_url, json=payload, headers=headers)
 	response = requests.request("POST", response_url, headers=headers, data=payload)
-
+	print('after sending')
 
 	print(response.text)
 
