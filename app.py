@@ -6,8 +6,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
-API_KEY='5d2d40e47eab5bfb7232db7967fba06bc434e3fb8fae568b9042787ced10523c'
-API_KEY_BASE64='c2FpLnMua2FtYXQrMDdAZ21haWwuY29tOjVkMmQ0MGU0N2VhYjViZmI3MjMyZGI3OTY3ZmJhMDZiYzQzNGUzZmI4ZmFlNTY4YjkwNDI3ODdjZWQxMDUyM2M='
+API_KEY='a60565fcf573bc674908bbbd0f1c10cd96f29f6dd7b16f2a6d91374288bda3e7'
+API_KEY_BASE64='c2FpLnMua2FtYXQrMDhAZ21haWwuY29tOmE2MDU2NWZjZjU3M2JjNjc0OTA4YmJiZDBmMWMxMGNkOTZmMjlmNmRkN2IxNmYyYTZkOTEzNzQyODhiZGEzZTc='
 
 @app.route("/hello")
 def index():
