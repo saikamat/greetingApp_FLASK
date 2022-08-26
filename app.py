@@ -40,7 +40,7 @@ def greeter():
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
 	# print(ticket_id)
-	response_url = "https://saikamat7.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat8.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
@@ -90,7 +90,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 
 
 def send_internal_mail(ticket_id, user, message_text, sender_id):
-	response_url = "https://saikamat7.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat8.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
