@@ -6,8 +6,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "manbearpig_MUDMAN888"
-API_KEY='67604f5fb412fdae94c6ed69c2b76ebd41739e038a952dfef1a4c1d598106371'
-API_KEY_BASE64='a2Fpc2hhbWF0ODkrMDNAZ21haWwuY29tOjY3NjA0ZjVmYjQxMmZkYWU5NGM2ZWQ2OWMyYjc2ZWJkNDE3MzllMDM4YTk1MmRmZWYxYTRjMWQ1OTgxMDYzNzE='
+API_KEY='5d2d40e47eab5bfb7232db7967fba06bc434e3fb8fae568b9042787ced10523c'
+API_KEY_BASE64='c2FpLnMua2FtYXQrMDdAZ21haWwuY29tOjVkMmQ0MGU0N2VhYjViZmI3MjMyZGI3OTY3ZmJhMDZiYzQzNGUzZmI4ZmFlNTY4YjkwNDI3ODdjZWQxMDUyM2M='
 
 @app.route("/hello")
 def index():
@@ -40,7 +40,7 @@ def greeter():
 
 def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, receiver_email, sender_name):
 	# print(ticket_id)
-	response_url = "https://saikamat4.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat7.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
@@ -63,7 +63,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 		"via": "helpdesk",
 		"body_html": email_text,
 		"body_text": email_text,
-		"created_datetime": "2022-08-25T21:46:41.966927",
+		"created_datetime": "2022-08-26T17:16:41.966927",
 		"external_id": "",
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
@@ -73,7 +73,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 		"sender": {
 			"id": sender_id
 		},
-		"sent_datetime": "2022-08-25T21:46:41.966927",
+		"sent_datetime": "2022-08-26T17:16:41.966927",
 		"subject": "Thank you for reaching out"
 	})
 	headers = {
@@ -90,7 +90,7 @@ def send_email_response(ticket_id, user, email_text, sender_id, receiver_id, rec
 
 
 def send_internal_mail(ticket_id, user, message_text, sender_id):
-	response_url = "https://saikamat4.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
+	response_url = "https://saikamat7.gorgias.com/api/tickets/"+str(ticket_id)+"/messages"
 	print(response_url)
 	payload = json.dumps({
 		"channel": "email",
@@ -113,7 +113,7 @@ def send_internal_mail(ticket_id, user, message_text, sender_id):
 		"via": "helpdesk",
 		"body_html": message_text,
 		"body_text": message_text,
-		"created_datetime": "2022-08-25T21:46:41.966927",
+		"created_datetime": "2022-08-26T17:16:41.966927",
 		"external_id": "",
 		"failed_datetime": None,
 		"message_id": "<123345676453.2445.234@web>",
@@ -123,7 +123,7 @@ def send_internal_mail(ticket_id, user, message_text, sender_id):
 		"sender": {
 			"id": sender_id
 		},
-		"sent_datetime": "2022-08-25T21:46:41.966927",
+		"sent_datetime": "2022-08-26T17:16:41.966927",
 		"subject": "Thank you for reaching out"
 	})
 	headers = {
